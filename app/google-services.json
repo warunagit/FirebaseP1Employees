@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "127296092727",
+    "firebase_url": "https://employees-4f76b-default-rtdb.firebaseio.com",
+    "project_id": "employees-4f76b",
+    "storage_bucket": "employees-4f76b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127296092727:android:e454386e72e88ccd375db2",
+        "android_client_info": {
+          "package_name": "com.waruna.firebasep1employees"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOsexWGSDcaqQoi_L3NsbTgKpMeMnLVOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
