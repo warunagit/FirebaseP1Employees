@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseP1Employees">
         <activity
-            android:name=".AddActivity"
+            android:name=".activities.FetchingActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.AddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

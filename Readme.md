@@ -4,11 +4,16 @@ CodeingZest https://www.youtube.com/playlist?list=PLHQRWugvckFry9Q1OT6hLNfyUizT7
 creat repo in github 
 git init 
 git remote add origin REMOTE-URL 
-git remote -v 
+git remote -v
+
 git status 
 git add . 
 git commit -am "upload" 
 git push origin main
+
+-if error
+git branch -M main
+git push -u origin main
 
 -register app in firebase using app namespace 
 download config json file 

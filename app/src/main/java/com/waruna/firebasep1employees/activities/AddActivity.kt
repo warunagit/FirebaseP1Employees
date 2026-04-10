@@ -1,4 +1,4 @@
-package com.waruna.firebasep1employees
+package com.waruna.firebasep1employees.activities
 
 import android.os.Bundle
 import android.widget.Button
@@ -7,10 +7,9 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.Firebase
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.database
-import com.waruna.p1employer.EmployeeModel
+import com.waruna.firebasep1employees.R
+import com.waruna.firebasep1employees.models.EmployeeModel
 
 class AddActivity : AppCompatActivity() {
 
@@ -40,7 +39,5 @@ class AddActivity : AppCompatActivity() {
                     Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
                 }
         }
-
-        //firebaseRef.push().apply { score.id = key.toString() setValue(score) }
     }
 }
