@@ -29,10 +29,11 @@ class AddActivity : AppCompatActivity() {
 
 
         btnSave.setOnClickListener {
-            val dbRef = Firebase.database.getReference("company")
+            val dbRef = Firebase.database.getReference("employees")
             val nextId = dbRef.push().key!!
             val employee = EmployeeModel(nextId,etName.text.toString(),etAge.text.toString())
-            dbRef.child("employees").child(nextId).setValue(employee)
+            //dbRef.child("employees").child(nextId).setValue(employee)
+            dbRef.child(nextId).setValue(employee)
                 .addOnCompleteListener {
                     Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
                 }.addOnFailureListener {err->

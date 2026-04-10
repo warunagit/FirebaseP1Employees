@@ -15,13 +15,18 @@
         android:id="@+id/empRecyclerView"/>
 
     <TextView
+        android:id="@+id/tvLoading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="50sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:visibility="gone"
-        android:id="@+id/tvLoading"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="LOADING..."
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        tools:ignore="RtlCompat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
