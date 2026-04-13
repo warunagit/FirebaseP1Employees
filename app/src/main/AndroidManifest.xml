@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseP1Employees">
         <activity
+            android:name=".activities.ViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.FetchingActivity"
             android:exported="false" />
         <activity

@@ -1,5 +1,6 @@
 package com.waruna.firebasep1employees.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -76,6 +77,18 @@ class FetchingActivity : AppCompatActivity() {
                     }
                     val empAdaptor = EmployeeAdaptor(employeeList)
                     employeeRecyclerView.adapter = empAdaptor
+
+                    //set custom click listner interface
+                    empAdaptor.setOnItemClickListner(object: EmployeeAdaptor.onItemClickListner{
+                        override fun onItemClick(adapterPosition: Int) {
+                            val intent = Intent(this@FetchingActivity, ViewActivity::class.java)
+                            intent.putExtra("empID",employeeList[adapterPosition].id)
+                            intent.putExtra("name",employeeList[adapterPosition].name)
+                            intent.putExtra("age",employeeList[adapterPosition].age)
+                            startActivity(intent)
+                        }
+                    })
+
                     employeeRecyclerView.visibility = View.VISIBLE
                     tvLoading.visibility = View.GONE
                 }
