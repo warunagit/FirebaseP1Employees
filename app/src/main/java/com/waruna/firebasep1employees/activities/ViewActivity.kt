@@ -1,5 +1,6 @@
 package com.waruna.firebasep1employees.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -92,6 +93,25 @@ class ViewActivity : AppCompatActivity() {
             setValues(receivedEmpId,updateName.text.toString(),updateAge.text.toString())
 
             alertDialog.dismiss()
+        }
+
+        btnDelete.setOnClickListener {
+            Log.d("Log: ","Delete clicked")
+            deleteRecord(receivedEmpId);
+        }
+    }
+
+    fun deleteRecord(receivedEmpId: String) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("employees").child(receivedEmpId)
+        val mTask = dbRef.removeValue()
+        mTask.addOnSuccessListener {
+            Toast.makeText(this,"Deleted successfully!", Toast.LENGTH_LONG).show()
+
+            val intent = Intent(this, FetchingActivity::class.java)
+            finish()
+            startActivity(intent)
+        }.addOnFailureListener {error ->
+            Toast.makeText(this,"Error! "+error.message, Toast.LENGTH_LONG).show()
         }
     }
 
